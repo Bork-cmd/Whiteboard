@@ -48,6 +48,7 @@ Partial Class frmWhiteboard
         Me.mnuBrushColourYellow = New System.Windows.Forms.ToolStripMenuItem()
         Me.sfdSaveAs = New System.Windows.Forms.SaveFileDialog()
         Me.pbxCanvas = New System.Windows.Forms.PictureBox()
+        Me.mnuFileSave = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuTopMenu.SuspendLayout()
         CType(Me.pbxCanvas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -63,7 +64,7 @@ Partial Class frmWhiteboard
         '
         'mnuFile
         '
-        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileNew, Me.mnuFileSaveAs, Me.mnuFileExit})
+        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileNew, Me.mnuFileSave, Me.mnuFileSaveAs, Me.mnuFileExit})
         Me.mnuFile.Name = "mnuFile"
         Me.mnuFile.Size = New System.Drawing.Size(37, 20)
         Me.mnuFile.Text = "&File"
@@ -72,20 +73,19 @@ Partial Class frmWhiteboard
         '
         Me.mnuFileNew.Name = "mnuFileNew"
         Me.mnuFileNew.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.mnuFileNew.Size = New System.Drawing.Size(163, 22)
+        Me.mnuFileNew.Size = New System.Drawing.Size(152, 22)
         Me.mnuFileNew.Text = "&New"
         '
         'mnuFileSaveAs
         '
         Me.mnuFileSaveAs.Name = "mnuFileSaveAs"
-        Me.mnuFileSaveAs.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.mnuFileSaveAs.Size = New System.Drawing.Size(163, 22)
-        Me.mnuFileSaveAs.Text = "&Save As..."
+        Me.mnuFileSaveAs.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileSaveAs.Text = "Save &As..."
         '
         'mnuFileExit
         '
         Me.mnuFileExit.Name = "mnuFileExit"
-        Me.mnuFileExit.Size = New System.Drawing.Size(163, 22)
+        Me.mnuFileExit.Size = New System.Drawing.Size(152, 22)
         Me.mnuFileExit.Text = "E&xit"
         '
         'mnuEdit
@@ -99,14 +99,14 @@ Partial Class frmWhiteboard
         '
         Me.mnuEditCopy.Name = "mnuEditCopy"
         Me.mnuEditCopy.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.mnuEditCopy.Size = New System.Drawing.Size(144, 22)
+        Me.mnuEditCopy.Size = New System.Drawing.Size(152, 22)
         Me.mnuEditCopy.Text = "&Copy"
         '
         'mnuEditPaste
         '
         Me.mnuEditPaste.Name = "mnuEditPaste"
         Me.mnuEditPaste.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.mnuEditPaste.Size = New System.Drawing.Size(144, 22)
+        Me.mnuEditPaste.Size = New System.Drawing.Size(152, 22)
         Me.mnuEditPaste.Text = "&Paste"
         '
         'mnuBrush
@@ -141,74 +141,74 @@ Partial Class frmWhiteboard
         '
         Me.mnuBrushColourBlack.Name = "mnuBrushColourBlack"
         Me.mnuBrushColourBlack.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.mnuBrushColourBlack.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourBlack.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourBlack.Text = "Black"
         '
         'mnuBrushColourBlue
         '
         Me.mnuBrushColourBlue.Name = "mnuBrushColourBlue"
-        Me.mnuBrushColourBlue.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourBlue.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourBlue.Text = "Blue"
         '
         'mnuBrushColourBrown
         '
         Me.mnuBrushColourBrown.Name = "mnuBrushColourBrown"
-        Me.mnuBrushColourBrown.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourBrown.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourBrown.Text = "Brown"
         '
         'mnuBrushColourGainsboro
         '
         Me.mnuBrushColourGainsboro.Name = "mnuBrushColourGainsboro"
-        Me.mnuBrushColourGainsboro.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourGainsboro.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourGainsboro.Text = "Gainsboro"
         '
         'mnuBrushColourGray
         '
         Me.mnuBrushColourGray.Name = "mnuBrushColourGray"
-        Me.mnuBrushColourGray.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourGray.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourGray.Text = "Gray"
         '
         'mnuBrushColourMintCream
         '
         Me.mnuBrushColourMintCream.Name = "mnuBrushColourMintCream"
-        Me.mnuBrushColourMintCream.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourMintCream.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourMintCream.Text = "MintCream"
         '
         'mnuBrushColourOrange
         '
         Me.mnuBrushColourOrange.Name = "mnuBrushColourOrange"
-        Me.mnuBrushColourOrange.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourOrange.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourOrange.Text = "Orange"
         '
         'mnuBrushColourPurple
         '
         Me.mnuBrushColourPurple.Name = "mnuBrushColourPurple"
-        Me.mnuBrushColourPurple.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourPurple.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourPurple.Text = "Purple"
         '
         'mnuBrushColourRed
         '
         Me.mnuBrushColourRed.Name = "mnuBrushColourRed"
-        Me.mnuBrushColourRed.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourRed.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourRed.Text = "Red"
         '
         'mnuBrushColourSalmon
         '
         Me.mnuBrushColourSalmon.Name = "mnuBrushColourSalmon"
-        Me.mnuBrushColourSalmon.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourSalmon.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourSalmon.Text = "Salmon"
         '
         'mnuBrushColourWhite
         '
         Me.mnuBrushColourWhite.Name = "mnuBrushColourWhite"
         Me.mnuBrushColourWhite.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
-        Me.mnuBrushColourWhite.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourWhite.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourWhite.Text = "White"
         '
         'mnuBrushColourYellow
         '
         Me.mnuBrushColourYellow.Name = "mnuBrushColourYellow"
-        Me.mnuBrushColourYellow.Size = New System.Drawing.Size(150, 22)
+        Me.mnuBrushColourYellow.Size = New System.Drawing.Size(152, 22)
         Me.mnuBrushColourYellow.Text = "Yellow"
         '
         'pbxCanvas
@@ -219,6 +219,13 @@ Partial Class frmWhiteboard
         Me.pbxCanvas.Size = New System.Drawing.Size(384, 237)
         Me.pbxCanvas.TabIndex = 1
         Me.pbxCanvas.TabStop = False
+        '
+        'mnuFileSave
+        '
+        Me.mnuFileSave.Name = "mnuFileSave"
+        Me.mnuFileSave.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.mnuFileSave.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileSave.Text = "&Save"
         '
         'frmWhiteboard
         '
@@ -266,4 +273,5 @@ Partial Class frmWhiteboard
     Friend WithEvents sfdSaveAs As SaveFileDialog
     Friend WithEvents mnuEditCopy As ToolStripMenuItem
     Friend WithEvents pbxCanvas As PictureBox
+    Friend WithEvents mnuFileSave As ToolStripMenuItem
 End Class
